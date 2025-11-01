@@ -1,0 +1,31 @@
+augmentation:
+  degrees: 0.0
+  fliplr: 0.5
+  flipud: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  mosaic: 1.0
+  scale: 0.5
+  translate: 0.1
+data:
+  dataset_yaml: ./processed_data/dataset.yaml
+  processed_dir: ./processed_data
+model:
+  input_channels: 3
+  num_classes: 15
+  size: s
+  type: yolov8
+optimizer:
+  lr0: 0.001
+  momentum: 0.937
+  name: AdamW
+  weight_decay: 0.0005
+training:
+  batch_size: 8
+  device: cuda
+  epochs: 50
+  img_size: 640
+  patience: 20
+  save_period: 10
+  workers: 4
